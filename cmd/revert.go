@@ -1,9 +1,9 @@
 package cmd
 
 import (
+	"github.com/5sigma/mg/console"
+	"github.com/5sigma/mg/project"
 	"github.com/spf13/cobra"
-	"mg/console"
-	"mg/project"
 )
 
 // revertCmd represents the revert command

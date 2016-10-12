@@ -1,10 +1,10 @@
 package cmd
 
 import (
+	"github.com/5sigma/mg/console"
+	"github.com/5sigma/mg/project"
 	"github.com/spf13/cobra"
 	"github.com/ttacon/chalk"
-	"mg/console"
-	"mg/project"
 	"os"
 	"strings"
 )

@@ -1,8 +1,8 @@
 package cmd
 
 import (
+	"github.com/5sigma/mg/console"
 	"github.com/spf13/cobra"
-	"mg/console"
 )
 
 // seedCmd represents the seed command

@@ -3,8 +3,8 @@ package project
 import (
 	"errors"
 	"fmt"
+	"github.com/5sigma/mg/console"
 	"github.com/spf13/viper"
-	"mg/console"
 	"os"
 	"path"
 	"path/filepath"

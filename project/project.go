@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/5sigma/mg/console"
+	"github.com/5sigma/mg/dbhandler"
 	"github.com/spf13/viper"
 	"os"
 	"path"
@@ -21,7 +22,7 @@ func createPath(filePath string) {
 
 func CreateProject(filePath string) error {
 	createPath(filePath)
-	handler, err := GetHandler()
+	handler, err := dbhandler.GetHandler()
 	if err != nil {
 		return err
 	}
@@ -52,7 +53,7 @@ func migrateFile(fp string, info os.FileInfo, err error) error {
 		return err
 	}
 
-	handler, err := GetHandler()
+	handler, err := dbhandler.GetHandler()
 	if err != nil {
 		return err
 	}
@@ -102,7 +103,7 @@ func revertVersion(version string) error {
 	if err != nil {
 		return err
 	}
-	handler, err := GetHandler()
+	handler, err := dbhandler.GetHandler()
 	if err != nil {
 		return err
 	}
@@ -118,7 +119,7 @@ func revertVersion(version string) error {
 }
 
 func Revert(version string) error {
-	handler, err := GetHandler()
+	handler, err := dbhandler.GetHandler()
 	if err != nil {
 		return err
 	}
